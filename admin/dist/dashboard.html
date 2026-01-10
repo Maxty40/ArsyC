@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard Administrasi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- AdminLTE -->
+  <link rel="stylesheet" href="./css/adminlte.css">
+
+  <!-- Custom CSS -->
+   <link rel="stylesheet" href="./css/admin-dashboard-style.css">
+
+</head>
+
+<body class="layout-fixed sidebar-expand-lg sidebar-open bg-body-tertiary">
+  <div class="app-wrapper">
+    <!--Navbar-->
+    <nav class="app-header navbar navbar-expand bg-body">
+      <div class="container-fluid">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown user-menu">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="./assets/img/user2-160x160.jpg" class="user-image rounded-circle shadow" alt="User Image">
+              <span class="d-none d-md-inline">Shofie</span>
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+              <!-- User Header -->
+              <li class="user-header bg-primary text-center">
+                <img src="./assets/img/user2-160x160.jpg" class="rounded-circle shadow mb-2" alt="User Image">
+                <p class="mb-0 text-white fw-semibold">
+                  Shofie Amalia
+                </p>
+                <small class="text-white-50">
+                  Administrator
+                </small>
+              </li>
+
+              <!-- User Footer -->
+              <li class="user-footer d-flex justify-content-end px-3 py-2">
+                <a href="../../landing/dist/index.html" class="btn btn-danger btn-sm">
+                  Sign out
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+    <!--Navbar-->
+
+    <!--begin::Sidebar-->
+    <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+      <div class="sidebar-brand">
+        <a href="dashboard.html" class="brand-link">
+          <img src="./assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image" />
+          <span class="brand-text fw-light">Dashboard Admin</span>
+        </a>
+      </div>
+
+      <div class="sidebar-wrapper">
+        <nav class="mt-2">
+          <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="navigation"
+            aria-label="Main navigation" data-accordion="false" id="navigation">
+            <li class="nav-item">
+              <a href="dashboard.html" class="nav-link active">
+                <i class="nav-icon bi bi-speedometer2"></i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="transaction.html" class="nav-link">
+                <i class="nav-icon bi bi-table"></i>
+                <p>Tabel Transaksi</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <!--end::Sidebar-->
+
+    <!--begin::App Main-->
+    <main class="app-main">
+      <div class="app-content-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="container">
+              <header>
+                <div class="header-content">
+                  <div class="brand-section">
+                    <div class="brand-mark">AC</div>
+                    <div class="brand-identity">
+                      <h1>ARCHICRAFT ADMIN</h1>
+                      <p>Executive Dashboard & Analytics</p>
+                    </div>
+                  </div>
+                  <div class="admin-profile">
+                    <p>Administrator</p>
+                    <div class="admin-name">SHOFIE AMALIA</div>
+                  </div>
+                </div>
+              </header>
+
+              <div class="metrics-grid">
+                <div class="metric-card">
+                  <div class="metric-label">Total Transaksi</div>
+                  <div class="metric-value">24</div>
+                  <div class="metric-unit">Pemesanan Aktif</div>
+                </div>
+                <div class="metric-card">
+                  <div class="metric-label">Klien Terdaftar</div>
+                  <div class="metric-value">18</div>
+                  <div class="metric-unit">Portfolio Aktif</div>
+                </div>
+                <div class="metric-card">
+                  <div class="metric-label">Nilai Kontrak</div>
+                  <div class="metric-value">240</div>
+                  <div class="metric-unit">Juta Rupiah</div>
+                </div>
+                <div class="metric-card">
+                  <div class="metric-label">Proses Review</div>
+                  <div class="metric-value">8</div>
+                  <div class="metric-unit">Menunggu Verifikasi</div>
+                </div>
+              </div>
+
+              <div class="main-panel">
+                <div class="panel-header">
+                  <h2 class="panel-title">REGISTER TRANSAKSI</h2>
+                  <div class="filter-controls">
+                    <button class="filter-option active">Semua</button>
+                    <button class="filter-option">Pending</button>
+                    <button class="filter-option">Proses</button>
+                    <button class="filter-option">Selesai</button>
+                    <button class="filter-option">Dibatalkan</button>
+                  </div>
+                </div>
+                <div class="data-table-wrapper">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>Nomor Order</th>
+                        <th>Nama Klien</th>
+                        <th>Spesifikasi Desain</th>
+                        <th>Luas Area</th>
+                        <th>Tanggal</th>
+                        <th>Nilai Kontrak</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody id="orderTable">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--end::App Main-->
+
+    <!--Footer-->
+    <footer class="app-footer">
+      <strong>
+        Copyright &copy; 2014-2025&nbsp;
+        <a href="https://adminlte.io" class="text-decoration-none">AdminLTE.io</a>.
+      </strong>
+      All rights reserved.
+    </footer>
+    <!--Footer-->
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js" crossorigin="anonymous"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="./js/adminlte.js"></script>
+
+  <script src="./js/admin-dashboard.js"></script>
+  
+</body>
+
+</html>

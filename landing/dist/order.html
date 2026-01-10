@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ArsyC - Order</title>
+
+    <link rel="stylesheet" href="../dist/css/output.css">
+
+    <link rel="icon" type="image/png" href="../dist/assets/img/Logo_ArsyC_House-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body class="font-sans bg-linear-to-t from-sky-500 to-indigo-500">
+    <section class="min-h-screen flex justify-center items-center px-6">
+        <div class="w-full max-w-4xl p-8 rounded-xl bg-white shadow-lg">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2 flex justify-center">
+                    <img class="w-full" src="../dist/assets/img/Logo ArsyC.png" alt="logo">
+                </div>
+                <div class="w-full md:w-2/3">
+                    <h3 class="text-blue-500 text-xl text-center font-bold mb-3">Pesan Desain Rumah Impian Anda</h3>
+                    <form id="orderForm" class="space-y-5">
+                        <div>
+                            <label for="namaLengkap" class="block mb-2">Nama Lengkap</label>
+                            <input type="text" id="namaLengkap" name="namaLengkap"
+                                class="w-full bg-gray-50 rounded-md border border-gray-300 shadow focus:border-blue-500 focus:outline focus:outline-blue-500 px-2 py-1"
+                                placeholder="">
+                            <div id="errNama"></div>
+                        </div>
+                        <div class="mb-8">
+                            <label for="spekRumah" class="block mb-2">Spesifikasi Rumah</label>
+                            <input type="text" id="spekRumah" name="spekRumah"
+                                class="w-full bg-gray-50 rounded-md border border-gray-300 shadow focus:border-blue-500 focus:outline focus:outline-blue-500 px-2 py-1"
+                                placeholder="">
+                            <div id="errSpek"></div>
+                        </div>
+                        <div class="mb-8">
+                            <label for="luasArea" class="block mb-2">Luas Area (m²)</label>
+                            <input type="number" id="luasArea" name="luasArea"
+                                class="w-full bg-gray-50 rounded-md border border-gray-300 shadow focus:border-blue-500 focus:outline focus:outline-blue-500 px-2 py-1"
+                                placeholder="">
+                            <div id="errArea"></div>
+                        </div>
+                        <div class="mb-8">
+                            <label for="tanggal" class="block mb-2">Tanggal Survey</label>
+                            <input type="date" id="tanggal" name="tanggal"
+                                class="w-full bg-gray-50 rounded-md border border-gray-300 shadow focus:border-blue-500 focus:outline focus:outline-blue-500 px-2 py-1"
+                                placeholder="">
+                            <div id="errDate"></div>
+                        </div>
+                        <div class="flex flex-row gap-8">
+                            <button type="submit" id="submit"
+                                class="w-full text-white bg-linear-to-b from-blue-600 to-indigo-600 hover:from-indigo-600 hover:to-blue-700 active:from-blue-700 active:to-indigo-700 shadow-lg rounded-lg font-medium text-sm px-5 py-1.5 text-center">Pesan
+                                Sekarang
+                            </button>
+                            <a href="index.html"
+                                class="w-full text-white bg-linear-to-b from-blue-600 to-indigo-600 hover:from-indigo-600 hover:to-blue-700 active:from-blue-700 active:to-indigo-700 shadow-lg rounded-lg font-medium text-sm px-5 py-1.5 text-center">
+                                Batalkan
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="./js/order.js"></script>
+</body>
+
+</html>

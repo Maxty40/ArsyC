@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: #1976d2;
+    min-height: 100vh;
+    color: #1976d2;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(35, 17, 232, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Sidebar Styling yang Konsisten */
+.app-sidebar {
+    background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%) !important;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.sidebar-brand {
+    padding: 20px 15px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white !important;
+}
+
+.brand-image {
+    height: 35px;
+    width: 35px;
+}
+
+.brand-text {
+    font-size: 18px;
+    font-weight: 400;
+    color: white !important;
+}
+
+.sidebar-menu {
+    padding: 15px 0 !important;
+}
+
+.nav-item {
+    margin: 5px 15px !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-item.dropdown {
+    overflow: visible;
+}
+
+/* AdminLTE-like User Dropdown */
+.user-menu .dropdown-menu {
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0;
+    min-width: 260px;
+}
+
+.user-menu .user-header {
+    padding: 20px 10px;
+}
+
+.user-menu .user-header img {
+    width: 90px;
+    height: 90px;
+}
+
+.user-menu .user-footer {
+    background: #f4f6f9;
+}
+
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.app-sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-link.active {
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.1) 100%) !important;
+    color: white !important;
+    border-left-color: #667eea;
+    font-weight: 500;
+}
+
+.nav-link.active .nav-icon {
+    color: white !important;
+}
+
+.nav-icon {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-link p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    padding: 35px 50px;
+    border-radius: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    border-top: 3px solid #204f7fff;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.brand-mark {
+    width: 60px;
+    height: 60px;
+    background: #204f7fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f8fafc;
+    font-size: 26px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-family: 'Courier New', monospace;
+}
+
+.brand-identity h1 {
+    font-size: 32px;
+    font-weight: 300;
+    color: #204f7fff;
+    letter-spacing: 3px;
+    margin-bottom: 4px;
+}
+
+.brand-identity p {
+    font-size: 12px;
+    color: #64748b;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+}
+
+.admin-profile {
+    text-align: right;
+}
+
+.admin-profile p {
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 3px;
+}
+
+.admin-profile .admin-name {
+    font-size: 15px;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 40px 35px;
+    border-radius: 30px;
+    border-left: 3px solid #204f7fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.metric-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.metric-label {
+    font-size: 11px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    font-family: 'Courier New', monospace;
+}
+
+.metric-value {
+    font-size: 36px;
+    color: #1e293b;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+.metric-unit {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.main-panel {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.panel-header {
+    padding: 35px 50px;
+    border-bottom: 1px solid #e2e8f0;
+    border-top: 3px solid #204f7fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-title {
+    font-size: 20px;
+    color: #204f7fff;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 2px;
+    background: #f1f5f9;
+    padding: 4px;
+}
+
+.filter-option {
+    padding: 10px 24px;
+    background: transparent;
+    border: none;
+    color: #64748b;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Courier New', monospace;
+}
+
+.filter-option:hover {
+    color: #1e293b;
+}
+
+.filter-option.active {
+    background: #1e293b;
+    color: #f8fafc;
+}
+
+.data-table-wrapper {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.data-table thead {
+    background: #f8fafc;
+}
+
+.data-table thead th {
+    padding: 20px 30px;
+    text-align: left;
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid #e2e8f0;
+    font-family: 'Courier New', monospace;
+}
+
+.data-table tbody tr {
+    border-bottom: 10px solid #f1f5f9;
+    transition: background 0.2s;
+}
+
+.data-table tbody tr:hover {
+    background: #fafbfc;
+}
+
+.data-table tbody td {
+    padding: 24px 30px;
+    color: #334155;
+    font-size: 14px;
+}
+
+.order-id {
+    font-family: 'Courier New', monospace;
+    color: #1e293b;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.client-name {
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.design-type {
+    color: #475569;
+    font-style: italic;
+}
+
+.land-area {
+    font-family: 'Courier New', monospace;
+    color: #64748b;
+}
+
+.price {
+    font-family: 'Courier New', monospace;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.status-indicator {
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+}
+
+.status-awaiting {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fbbf24;
+}
+
+.status-processing {
+    background: #dbeafe;
+    color: #1e40af;
+    border: 1px solid #60a5fa;
+}
+
+.status-finalized {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #34d399;
+}
+
+.status-terminated {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #f87171;
+}
+
+@media (max-width: 1400px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    header {
+        padding: 25px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .admin-profile {
+        text-align: center;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 25px;
+    }
+
+    .filter-controls {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .data-table {
+        font-size: 12px;
+    }
+
+    .data-table thead th,
+    .data-table tbody td {
+        padding: 15px;
+    }
+
+    /* Responsive Sidebar */
+    .nav-item {
+        margin: 3px 10px !important;
+    }
+
+    .nav-link {
+        padding: 10px 15px !important;
+    }
+
+    .nav-icon {
+        font-size: 16px;
+    }
+
+    .nav-link p {
+        font-size: 13px;
+    }
+}
