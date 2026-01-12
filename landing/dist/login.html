@@ -11,7 +11,7 @@
 
     <link rel="icon" type="image/png" href="../dist/assets/img/Logo_ArsyC_House-removebg-preview.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    
+
 </head>
 
 <body class="font-sans bg-linear-to-t from-sky-500 to-indigo-500">
@@ -44,8 +44,27 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
+
+    <!-- Success Pop-up -->
+    <div id="successPopup"
+        class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+        <div id="popupBox" class="bg-white rounded-2xl p-6 w-full max-w-sm text-center shadow-2xl
+           transform scale-90 translate-y-4 opacity-0
+           transition-all duration-300 ease-out">
+            <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center
+             rounded-full bg-green-100 text-green-600">
+                <i class="fas fa-check text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Anda Login Sebagai Admin!</h3>
+            <p class="text-sm text-gray-600 mb-5 leading-relaxed">
+                Selamat datang kembali. Anda akan diarahkan ke Dashboard.
+            </p>
+            <button id="popupOkBtn" class="w-full rounded-lg bg-linear-to-r from-blue-600 to-indigo-600 py-2 text-white font-medium hover:from-indigo-600 hover:to-blue-700 active:scale-95 transition">OK, Mengerti</button>
+        </div>
+    </div>
+
     <script src="./js/login.js"></script>
 </body>
+
 </html>
