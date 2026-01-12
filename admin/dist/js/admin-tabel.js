@@ -6,7 +6,7 @@ function loadTransactions() {
         orderId: `#${o.id}`,
         clientName: o.nama,
         designType: o.spek,
-        landArea: o.luas,
+        landArea: o.luas || o.landArea,
         date: formatTanggal(o.tanggal),
         price: o.harga,
         status: o.status

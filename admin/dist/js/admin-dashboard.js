@@ -40,6 +40,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+function getStatusClass(status) {
+    const classes = {
+        'Pending': 'status-awaiting',
+        'Proses': 'status-processing',
+        'Selesai': 'status-finalized',
+        'Dibatalkan': 'status-terminated'
+    };
+    return classes[status] || '';
+}
+
 // Update from localstorage
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,16 +59,17 @@ document.addEventListener('DOMContentLoaded', () => {
     table.innerHTML = '';
 
     orders.forEach((o, i) => {
+        const statusClass = getStatusClass(o.status);
         table.innerHTML += `
         <tr>
           <td class="order-id">#${o.id}</td>
           <td class="client-name">${o.nama}</td>
           <td class="design-type">${o.spek}</td>
-          <td class="land-area">${o.area}</td>
+          <td class="land-area">${o.luas} m²</td>
           <td>${formatTanggal(o.tanggal)}</td>
           <td class="price">${formatRupiah(o.harga)}</td>
           <td>
-            <span class="status-indicator status-awaiting">
+            <span class="status-indicator ${statusClass}">
               ${o.status}
               </span>
           </td>
